@@ -10,7 +10,7 @@ master = Tk()
 master.title("Weather App")
 master.config(bg="white")
 
-img = Image.open("/Volumes/Backup/weather.png")
+img = Image.open("/Users/gb/Downloads/Weather App/weather.png")
 img = img.resize((150, 150))
 img = ImageTk.PhotoImage(img)
 
@@ -25,7 +25,7 @@ def getWeather():
     temperatureLabel.config(text=temperature)
     weatherPredictionLabel.config(text=weatherPrediction)
 
-    temperatureLabel.after(60000, getWeather)
+    temperatureLabel.after(600, getWeather)
     master.update()
 
 locationLabel = Label(master, font=("Calibri bold", 20), bg="white")
